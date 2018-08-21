@@ -1,0 +1,1363 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font: 12px/1.5 Arial, "hiragino sans gb", "microsoft yahei", "simsun", Helvetica, sans-serif;
+}
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    background: url("../../public/images/bg.png") no-repeat;
+
+}
+input{
+    font: 12px/1.5 Arial, "hiragino sans gb", "microsoft yahei", "simsun", Helvetica, sans-serif;
+}
+
+#player_local .subbar{
+    display: none;
+}
+.displayNone{
+    display: none;
+}
+
+.videoAudio{
+    color:#009688;
+}
+
+/*菜单栏*/
+.toolbar{
+    width: 160px;
+    height:100%;
+    background:#393D49;
+ }
+#extendedToolbarButton #navTop{
+    cursor:pointer;
+    line-height:70px;
+    text-align:center;
+    border-bottom:2px #009688 solid;
+}
+#extendedToolbarButton .selected{
+    background: #131922;
+    /*background: rgba(0,0,0,.6);*/
+}
+#extendedToolbarButton .button{
+    cursor:pointer;
+}
+#extendedToolbarButton cite{
+    font-size:14px;
+    margin-left: 5px;
+    color:#F5F5F5;
+}
+#extendedToolbarButton .button i{
+    font-size: 20px;
+    color:#fff;
+}
+#extendedToolbarButton .button:hover{
+    background-color: rgba(0,0,0,.3)
+}
+.toolbar_button_profile img{
+    width: 46px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.sideToolbarContainer{
+    background: #131922;
+    /*background-color: rgba(0,0,0,.8);*/
+    height: 100%;
+    left: 160px;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    padding-top: 20px;
+    z-index:2;
+}
+#profile_container,#change_container,#contact_list,#addMeeting,#starMeeting,#call_records,#order,#meetingList,#meetingDetailList{
+    width: 200px;
+    color:#fff;
+    height: 100%;
+}
+#profile_container .head_portrait{
+    text-align: center;
+    cursor: pointer;
+    margin-bottom:25px;
+}
+#profile_container .head_portrait img{
+    width: 100px;
+    border-radius: 50%;
+}
+#profile_container .my_nickName{
+    text-align: center;
+    position:relative;
+}
+#profile_container .my_nickName #editMyName{
+    position:absolute;
+    top:0;
+    right:20px;
+}
+#profile_container .my_nickName span{
+    color:#d5d5d5;
+    cursor: pointer;
+}
+#profile_container .my_nickName span:hover{
+    color:#fff;
+}
+#profile_container #my_nickName{
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    color:#f5f5f5;
+    background: none;
+    outline: none;
+    border: none;
+    width: 100px;
+}
+#profile_container .my_phone{
+    text-align: center;
+    font-size: 14px;
+}
+#profile_container .my_code{
+    text-align: center;
+    margin-top: 60px;
+}
+#profile_container .my_code img{
+    width: 140px;
+    margin:0 auto;
+    border: 2px solid rgba(256,256,256,0.7);
+}
+#changePsd{
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    width: 200px;
+}
+#loginOut{
+    position: absolute;
+    bottom: 25px;
+    text-align: center;
+    width: 200px;
+}
+#loginOut a,#changePsd a{
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    width: 80%;
+    background: #165ECC;
+    color:#f5f5f5;
+    cursor: pointer;
+}
+#loginOut a:hover,#changePsd a:hover{
+    background: #054DBB;
+    color:#fff;
+}
+#change_container .head_portrait{
+    text-align: center;
+    cursor: pointer;
+    margin-bottom:15px;
+}
+#change_container .psd_info{
+    width: 100%;
+    text-align: center;
+}
+#change_container .psd_info input{
+    width: 160px;
+    margin: 10px auto 0;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+#change_container #submit{
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    width: 200px;
+}
+#change_container #cancel{
+    position: absolute;
+    bottom: 25px;
+    text-align: center;
+    width: 200px;
+}
+#change_container #submit a,#change_container #cancel a{
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    width: 80%;
+    background: #165ECC;
+    color:#f5f5f5;
+    cursor: pointer;
+}
+#change_container #submit a:hover,#change_container #cancel a:hover{
+    background: #054DBB;
+    color:#fff;
+}
+/*联系人列表*/
+#contact_list .contact_operate a{
+    display: inline-block;
+    float: left;
+    width: 33.333333%;
+    text-align: center;
+    color:#fcfcfc;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*联系人列表*/
+#contactList{
+    margin-top: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#contactList::-webkit-scrollbar,#selectList::-webkit-scrollbar,.selectList::-webkit-scrollbar
+{
+    width: 7px;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+#contactList::-webkit-scrollbar-track,#selectList::-webkit-scrollbar-track,.selectList::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px #fff;
+    border-radius: 10px;
+    background-color: #000;
+}
+/*定义滑块 内阴影+圆角*/
+#contactList::-webkit-scrollbar-thumb,#selectList::-webkit-scrollbar-thumb,.selectList::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #fff;
+    background-color: #f5f5f5;
+}
+#contactList ul .tag{
+    padding-left: 23px;
+    color:#f9f9f9;
+    background: rgba(255,255,255,.1);
+}
+#contactList ul .contact{
+    padding: 7px 0 7px 10px;
+    height: 36px;
+    cursor: pointer;
+    position: relative;
+}
+#contactList ul .contact:hover{
+    background: rgba(0,0,0,.5);
+}
+#contactList ul .contact .contactHead_portrait{
+    width: 35px;
+    float: left;
+}
+#contactList ul .contact .contactHead_portrait img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#contactList ul .contact .contact_info{
+    float: left;
+    padding-left: 5px;
+    margin-left: 32px;
+    position: absolute;
+    /*position: fixed;*/
+    z-index: 1;
+}
+#contactList ul .contact .contact_info .contactName{
+    color:#fcfcfc;
+    font-size: 14px;
+    line-height:18px;
+}
+#contactList ul .contact .contact_info .contactPhone{
+    color:#fcfcfc;
+    font-size: 12px;
+}
+.call{
+    float: right;
+    width: 0;
+    height: 30px;
+    line-height:30px;
+    overflow: hidden;
+    margin:3px 2px 0 0;
+}
+#contactList .call{
+    margin: 3px 10px 0 0;
+}
+#contactList ul .contact .call a,#call_records_list ul li .call a{
+    display: block;
+    color:#f5f5f5;
+    text-align: center;
+    background: #28B16F;
+    width: 45px;
+}
+.addSelected{
+    position: absolute;
+    /*position: fixed;*/
+    z-index: 9999;
+}
+
+
+#chooseList{
+    width: 330px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99999;
+    background: #fff;
+    margin-left: -165px;
+    margin-top: -230px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.8);
+}
+#chooseList #_choose_streamList{
+    position:relative;height: 462px;overflow-x: hidden;overflow-y: auto;
+}
+#chooseList ul{
+    width: 100%;
+}
+#chooseList ul li{
+    width: 33%;
+    float: left;
+    padding: 10px 0;
+}
+#chooseList ul .selected .selectBox i {
+    color: #165ECC;}
+#chooseList ul li img{
+    width: 50px;
+    border-radius: 50%;
+}
+/*底部联系人操作*/
+.contact_operate_bottom{
+    position: absolute;
+    bottom: 9px;
+    height: 35px;
+    width: 200px;
+    text-align: center;
+}
+.contact_operate_bottom a{
+    display: inline-block;
+    width: 75%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    color:#f8f8f8;
+    font-size: 13px;
+    background:#165ECC;
+    border-radius: 3px;
+}
+.contact_operate_bottom .contactOperate{
+    width:50%;
+    float:left;
+}
+.contact_operate_bottom a:hover{
+    color:#fff;
+    background: #054DBB;
+}
+
+/*加入会议*/
+#addMeeting{
+    text-align: center;
+}
+#addMeeting input{
+    outline: none;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    width: 60%;
+    margin-top: 20px;
+}
+#addMeeting a{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 35px;
+    line-height: 35px;
+    background: #165ECC;
+    color:#f5f5f5;
+    cursor: pointer;
+    border-radius: 3px;
+}
+#addMeeting a:hover{
+    background: #054DBB;
+    color:#fff;
+}
+
+/*发起会议*/
+.meeting_info{
+    padding: 10px 20px;
+}
+.meeting_info .meetingInfo input,.meeting_info select{
+    width: 100%;
+    outline: none;
+    margin-top: 10px;
+    padding: 3px 5px;
+    box-sizing: border-box;
+    border: 1px solid #d5d5d5;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.selectTitle{
+    padding: 5px 0;
+    text-align: center;
+    color:#fcfcfc;
+}
+.startMInfo{
+    position: absolute;
+    bottom: 46px;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 10;
+    display: none;
+}
+.startMInfoBox{
+    position: relative;
+    width: 120px;
+    height: 35px;
+    background: #EA2111;
+    border-radius: 5px;
+}
+.startMInfoBox p {
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+}
+.startMInfoBox .triangle-down{
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 11px solid #EA2111;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -13px;
+}
+/*选择开会联系人列表*/
+#selectList,.selectList{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#selectList ul,.selectList ul{
+    margin-top: 0;
+}
+#selectList ul .tag,.selectList ul .tag{
+    padding-left:14px;
+    color:#f9f9f9;
+    background: rgba(255,255,255,.1);
+}
+
+#selectList ul .contact,.selectList ul .contact{
+    padding: 7px 0 7px 10px;
+    height: 35px;
+    cursor: pointer;
+}
+#selectList ul .contact:hover,.selectList ul .contact:hover{
+    background: rgba(0,0,0,.5);
+}
+#selectList ul .contact .selectBox,.selectList ul .contact .selectBox{
+    width: 20px;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+}
+#selectList ul .contact .selectBox i,.selectList ul .contact .selectBox i{
+    color:#c5c5c5;
+    font-size: 18px;
+}
+#selectList ul .selected .selectBox i,.selectList ul .selected .selectBox i{
+    color:#165ECC;
+}
+#selectList ul .selected,.selectList ul .selected{
+    background: rgba(0,0,0,.5);
+}
+#selectList ul .contact .contactHead_portrait,.selectList ul .contact .contactHead_portrait{
+    width: 35px;
+    float: left;
+    padding-left: 10px;
+}
+#selectList ul .contact .contactHead_portrait img,.selectList ul .contact .contactHead_portrait img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#selectList ul .contact .contact_info,.selectList ul .contact .contact_info{
+    float: left;
+    padding-left: 5px;
+}
+#selectList ul .contact .contact_info .contactName,.selectList ul .contact .contact_info .contactName{
+    color:#fcfcfc;
+    font-size: 14px;
+}
+#selectList ul .contact .contact_info .contactPhone,.selectList ul .contact .contact_info .contactPhone{
+    color:#fcfcfc;
+    font-size: 12px;
+}
+.startMeeting,.startVoiceMeeting,.orderButton{
+    width: 200px;
+    bottom: 0;
+    height: 30px;
+    text-align: center;
+}
+.startVoiceMeeting{
+    margin-top: 15px;
+}
+.startMeeting,.orderButton{
+    position: absolute;
+    margin-bottom: 15px;
+}
+.startVoiceMeeting a,.startMeeting a,.orderButton a{
+    background: #165ECC;
+    color:#f5f5f5;
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.startMeeting a:hover,.orderButton a:hover{
+    background: #054CAA;
+}
+
+/*通话记录*/
+#contact_list .contact_operate .search,#call_records .fast_call_phone,#meetingList .fast_search{
+    width: 180px;
+    margin: 10px auto;
+    background: #fcfcfc;
+    padding: 0 5px;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 5px;
+}
+#call_records_list,#meeting__list,#meeting_detail_info{
+    border-top: 1px solid #484848;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#call_records_list::-webkit-scrollbar,#_choose_streamList::-webkit-scrollbar,#meeting__list::-webkit-scrollbar
+{
+    width: 7px;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+#call_records_list::-webkit-scrollbar-track,#_choose_streamList::-webkit-scrollbar-track,#meeting__list::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px #fff;
+    border-radius: 10px;
+    background-color: #000;
+}
+/*定义滑块 内阴影+圆角*/
+#call_records_list::-webkit-scrollbar-thumb,#_choose_streamList::-webkit-scrollbar-thumb,#meeting__list::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #fff;
+    background-color: #f5f5f5;
+}
+#call_records_list ul{
+    margin-top: 5px;
+}
+#call_records_list ul li{
+    padding: 5px 0 5px 7px;
+    height: 35px;
+    cursor: pointer;
+}
+#call_records_list ul li:hover{
+    background: rgba(0,0,0,.2);
+}
+
+#call_records_list ul li .call_flag{
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    width: 22px;
+}
+#call_records_list ul li .call_info{
+    float: left;
+}
+#call_records_list ul li .not_get{
+    color:#C62F2F;
+}
+#call_records_list ul li .get{
+    color:#17A05E;
+}
+#call_records_list ul li .call_info .call_name{
+    color:#fcfcfc;
+    font-size: 14px;
+}
+#call_records_list ul li .call_info .call_time{
+    color:#e5e5e5;
+    font-size:12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 115px;
+}
+
+
+/*侧边栏动画*/
+.sideOut{
+    width: 0;
+    transition: width .3s;
+    -moz-transition: width .3s; /* Firefox 4 */
+    -webkit-transition: width .3s; /* Safari 和 Chrome */
+    -o-transition: width .3s; /* Opera */
+}
+.sideIn{
+    width: 200px;
+    transition: width .3s;
+    -moz-transition: width .3s; /* Firefox 4 */
+    -webkit-transition: width .3s; /* Safari 和 Chrome */
+    -o-transition: width .3s; /* Opera */
+}
+
+.li_call_out{
+    width: 45px;
+    transition: width .5s;
+    -moz-transition: width .5s; /* Firefox 4 */
+    -webkit-transition: width .5s; /* Safari 和 Chrome */
+    -o-transition: width .5s; /* Opera */
+}
+.li_call_in{
+    width: 0;
+    z-index: 2;
+    transition: width .5s;
+    -moz-transition: width .5s; /* Firefox 4 */
+    -webkit-transition: width .5s; /* Safari 和 Chrome */
+    -o-transition: width .5s; /* Opera */
+}
+
+
+/*登录,注册,重置密码框*/
+.login_box{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: url("../../public/images/bg.png");
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.LoginBox{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loginBox{
+    width: 300px;
+    height: 400px;
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -150px;
+    margin-top: -250px;
+}
+#loginBox .user_img{
+    text-align: center;
+    margin-top: 20px;
+}
+#loginBox .user_img img{
+    border-radius: 50%;
+    width: 100px;
+}
+#loginBox .info{
+    width: 120px;
+    height: 35px;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    border-radius: 5px;
+    margin-top: -60px;
+    margin-left: -60px;
+    display: none;
+    text-align: center;
+    color:#fff;
+    font-size: 14px;
+    line-height: 35px;
+}
+.login_info{
+    text-align: center;
+    margin-top: 20px;
+}
+.login_info input{
+    width: 60%;
+    outline: none;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: none;
+    color: #484848;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+#linkLogin{
+    text-align: center;
+    height: 35px;
+}
+#linkLogin a{
+    background: #165ECC;
+    display: inline-block;
+    width: 60%;
+    height: 35px;
+    line-height: 35px;
+    color: #fcfcfc;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+}
+#linkLogin a img{
+    height: 29px;
+    margin-top: 3px;
+    display: none;
+}
+#linkLogin a:hover{
+    background: #054Dbb;
+    color: #fff;
+}
+.checkBox{
+    width: 60%;
+    margin: 0 auto;
+    height: 45px;
+    margin-top: 5px;
+}
+.checkBox div{
+    float: left;
+    width: 50%;
+    cursor: pointer;
+    line-height: 45px;
+    color: #fcfcfc;
+    font-size: 14px;
+}
+.checkBox div span{
+    margin-left: 5px;
+}
+.checkBox .check{
+    color:#5E9CF6;
+}
+.link{
+    width: 60%;
+    margin: 20px auto 0 auto;
+}
+.link a{
+    display: inline-block;
+    width: 50%;
+    float: left;
+    color:#ececec;
+    cursor: pointer;
+    font-size: 14px;
+}
+.link a:hover{
+    color:#5E9CF6;
+}
+
+/*背景虚化*/
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    display: none;
+}
+
+
+/*control and videoArea css start*/
+.nav-bar {
+    position:fixed;
+    top:0;
+    left:0;
+    width:10%;
+    height:100%;
+    background:#000000;
+    opacity:0.8;
+    display:block;
+    -webkit-transition-delay: .6s;
+    -moz-transition-delay: .6s;
+    transition-delay: .6s;
+    z-index:2;
+}
+
+.nav-bar-close{
+    margin-left:-10%;
+    -webkit-transition: .6s margin;
+    -moz-transition:.6s margin;
+    transition:.6s margin;
+}
+
+.nav-bar-open{
+    margin-left:0%;
+    -webkit-transition: .6s margin;
+    -moz-transition:.6s margin;
+    transition:.6s margin;
+}
+
+.nav-control {
+    position:fixed;
+    display:block;
+    height:50px;
+    line-height:50px;
+    left:50%;
+    top:5%;
+    margin-left:-100px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background:rgba(0,0,0,0.5);
+    z-index:2;
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    transition-delay: 1s;
+}
+.nav-control .control-fs-2:first-child{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.nav-control .control-fs-2:last-child {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.nav-control-close{
+    margin-top:-5%;
+    -webkit-transition: .6s margin;
+    -moz-transition:.6s margin;
+    transition:.6s margin;
+}
+
+.nav-control-open{
+    margin-top:0%;
+    -webkit-transition: .6s margin;
+    -moz-transition:.6s margin;
+    transition:.6s margin;
+}
+
+.nav-control .control-box {
+    width:100%;
+    height:100%;
+}
+
+.nav-control .control-fs-2 {
+    float:left;
+    width:50px;
+    height:50px;
+    text-align:center;
+    cursor:pointer;
+}
+.nav-control .controlNative{
+    background:rgba(0,0,0,0.7);
+}
+.nav-control .controlClickNative{
+    background:#12499C;
+}
+.control-fs-2 .iconfont {
+    color:#ffffff;
+    font-size:20px;
+}
+
+.control-fs-2 .color-red {
+    color:#ff0000;
+}
+
+.displayNone{
+    display:none;
+}
+.displayBlock{
+    display:block;
+}
+#remoteVideos_area{
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+    box-sizing:border-box;
+}
+#remoteVideos_area #remoteVideos_meet{
+    position:relative;
+    width:100%;
+    height:100%;
+    float:left;
+}
+#remoteVideos_area #videoClose_streamList,#remoteVideos_area #choose_streamList{
+    width:330px;
+    position:absolute;
+    top:0;
+    color:#fff;
+    font-size:14px;
+    box-sizing:border-box;
+    background:rgba(0,0,0,0.8);
+}
+#remoteVideos_area #videoClose_streamList #sureChangVideo{
+    height:30px;
+    cursor:pointer;
+    float:right;
+}
+#remoteVideos_area #videoClose_streamList .videoClose_fl{
+    float:left;
+}
+#remoteVideos_area #videoClose_streamList .changeVideoInfo div{
+    line-height:20px;
+}
+#remoteVideos_area #videoClose_streamList .videoClose_fr{
+    float:right;
+}
+#remoteVideos_area #videoClose_streamList ul{
+    padding:15px 20px;
+
+}
+#remoteVideos_area #videoClose_streamList ul li{
+    height:40px;
+    cursor:pointer;
+    margin-bottom:10px;
+}
+.videoCloseSelect{
+    color:#165ECC;
+}
+#remoteVideos_area #videoClose_streamList ul li i{
+    font-size:18px;
+    margin-left:10px;
+}
+#remoteVideos_area #videoClose_streamList ul li i span{
+    font-size:15px;
+    color:#FFF;
+}
+#remoteVideos_area #videoClose_streamList img{
+    width:30px;
+    margin-right:13px;
+    border-radius:50%;
+}
+#remoteVideos_area #choose_streamList ul{
+    width:100%;
+    position: relative;
+}
+#remoteVideos_area #choose_streamList ul li{
+    width: 33%;
+    text-align: center;
+}
+#remoteVideos_area #choose_streamList img{
+    width:45px;
+    border-radius:50%;
+}
+#remoteVideo_bottom{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:140px;
+    padding:0 20px 17px 20px;
+    box-sizing:border-box;
+}
+#remoteVideos_area .remoteVideos-control-close{
+    margin-bottom:-140px;
+    -webkit-transition: 1s margin;
+    -moz-transition:1s margin;
+    transition:1s margin;
+}
+#remoteVideos_area .remoteVideos-control-open{
+    margin-bottom:0;
+    -webkit-transition: 1s margin;
+    -moz-transition:1s margin;
+    transition:1s margin;
+}
+.remoteVideos_meet_move1{
+    right:0;
+    -webkit-transition: .6s right;
+    -moz-transition:.6s right;
+    transition:.6s right;
+}
+.remoteVideos_meet_move2{
+    right:5%;
+    -webkit-transition: .6s right;
+    -moz-transition:.6s right;
+    transition:.6s right;
+}
+#remoteVideos_area #remoteVideos_meet .videoContainerBlock{
+    float:right;
+    margin:0 2px;
+    box-sizing:border-box;
+    background:#333;
+    cursor:pointer;
+    z-index:2;
+    color:#fff;
+    text-align:center;
+    line-height:120px;
+}
+.videoContainerBlock .joinMeetPersonSign{
+    position:absolute;
+    top:3px;
+    left:4px;
+    font-size:16px;
+    width:36px;
+    height:36px;
+    text-align:center;
+    line-height:36px;
+    border-radius:18px;
+    background:#165ecc;
+    z-index:3;
+}
+.videoContainerBlock .joinMeetPersonSign i{
+    color:#fff;
+}
+#remoteVideos_area #remoteVideos_meet .videoContainerBlock:hover {
+    cursor: hand;
+    border: 3px solid rgba(22,94,204,.4);
+    box-shadow: inset 0 0 3px rgba(22,94,204,.4),0 0 3px rgba(22,94,204,.4);
+}
+#remoteVideos_area #remoteVideos_meet #localVideoContainer{
+    width:210px;
+    height:120px;
+    right:0;
+}
+#remoteVideos_area #remoteVideos_meet .videoContainer_remote{
+   /* width:120px;*/
+    width:160px;
+    height:120px;
+}
+#remoteVideos_area #remoteVideos_meet .remoteVideos_arrow{
+    position:absolute;
+    bottom:0;
+    width:30px;
+    height:120px;
+    background:#000;
+    opacity:0.5;
+    color: #fff;
+    text-align:center;
+    line-height:110px;
+    z-index:3;
+    cursor:pointer;
+}
+#remoteVideos_area #remoteVideos_meet .remoteVideosActive{
+    /*color:rgb(22,94,204);*/
+    border:1px solid green;
+}
+
+#remoteVideos_area #remoteVideos_control{
+    width:20px;
+    height:21px;
+    position:absolute;
+    right:0;
+    text-align:center;
+    line-height:100%;
+    margin-right:2px;
+    bottom: 0;
+    margin-bottom: 15px;
+}
+#remoteVideos_area #remoteVideos_control i{
+    font-weight:400;
+    font-size:20px;
+    cursor:pointer;
+}
+/*control and videoArea css end*/
+
+/* bubble start*/
+.tip-bubble {
+    position: absolute;
+    top: -70px;
+    left:-50px;
+    background: rgba(0,0,0,0.8);
+    width: 140px;
+    line-height:20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    font-size:12px;
+    padding:10px 0;
+}
+#icodeButton .tip-bubble div{
+    text-align:left;
+}
+.tip-bubble-top{
+    top:56px;
+    left:0;
+    height:auto;
+    width:auto;
+    padding:6px 10px;
+    white-space:nowrap;
+}
+
+.tip-bubble:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+}
+
+.tip-bubble-top:after {
+    border-top:none;
+    border-bottom-color: rgba(0,0,0,0.8);
+    left: 50%;
+    bottom: 100%;
+    margin-left: -5px;
+    color:transparent;
+}
+
+.tip-bubble-bottom:after {
+    border-bottom:none;
+    border-top-color: #202020;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    color:transparent;
+}
+/* bubble end*/
+
+/*等待接听*/
+#wait{
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    top:50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -125px;
+    background: rgba(0,0,0,.4);
+    z-index: 10;
+}
+#wait .userImg {
+    padding-top: 25px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+#wait .userImg .img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+#wait .userImg .img img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#wait .border {
+    width: 120px;
+    height: 120px;
+    border:1px solid rgba(255,255,255,0.7);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -62px;
+    margin-left: -62px;
+    border-radius: 50%;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+}
+
+#wait .border span {
+    display: inline-block;
+    background:rgba(255,255,255,0.7);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: 100px;
+}
+
+#wait .rotate {
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: orbit;
+
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -moz-animation-name: orbit;
+}
+
+@-webkit-keyframes orbit {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+#wait .userInfo {
+    margin-top: 25px;
+    text-align: center;
+}
+#wait .userInfo .name{
+    font-size: 16px;
+    color:#fff;
+}
+#wait .userInfo .number{
+    font-size: 14px;
+    color:#fff;
+    margin-bottom: 5px;
+}
+#wait .userInfo .waitTip{
+    font-size:14px;
+    color:#f5f5f5;
+}
+#wait .control li {
+    float:left;
+    width:50%;
+    text-align:center;
+    cursor: pointer;
+    color:#f5f5f5;
+}
+.control {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    z-index:999;
+}
+.control li img{
+    display: inline-block;
+    width: 40px;
+}
+/*背景虚化*/
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    display: none;
+}
+#infoTips{
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0,0,0,.8);
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding:0 12px;
+    z-index:999;
+}
+
+#_myVideo video{
+    left: 0;
+    top:0;
+}
+
+.toolbar_out{
+    position: absolute;
+    left: -160px;
+    transition: left .5s;
+    -moz-transition: left .5s; /* Firefox 4 */
+    -webkit-transition: left .5s; /* Safari 和 Chrome */
+    -o-transition: left .5s;
+}
+.toolbar_out2{
+    position: absolute;
+    left: -360px;
+    transition: left 1s;
+    -moz-transition: left 1s; /* Firefox 4 */
+    -webkit-transition: left 1s; /* Safari 和 Chrome */
+    -o-transition: left 1s;
+}
+
+.toolbar_in{
+    position: absolute;
+    left: 0;
+    z-index:3;
+    transition: left .5s;
+    -moz-transition: left .5s; /* Firefox 4 */
+    -webkit-transition: left .5s; /* Safari 和 Chrome */
+    -o-transition: left .5s;
+}
+
+.nav-control-in{
+    top:5%;
+    transition: top .5s;
+    -moz-transition: top .5s; /* Firefox 4 */
+    -webkit-transition: top .5s; /* Safari 和 Chrome */
+    -o-transition: top .5s;
+}
+.nav-control-out{
+    top:-10%;
+    transition: top .5s;
+    -moz-transition: top .5s; /* Firefox 4 */
+    -webkit-transition: top .5s; /* Safari 和 Chrome */
+    -o-transition: top .5s;
+}
+
+.showVideo-control-in{
+    right:0;
+    transition: right .5s;
+    -moz-transition: right .5s; /* Firefox 4 */
+    -webkit-transition: right .5s; /* Safari 和 Chrome */
+    -o-transition: right .5s;
+}
+.showVideo-control-out{
+    right:-330px;
+    transition: right .5s;
+    -moz-transition: right .5s; /* Firefox 4 */
+    -webkit-transition: right .5s; /* Safari 和 Chrome */
+    -o-transition: right .5s;
+}
+
+/*会议列表*/
+#meeting__list ul li,#meeting_detail_info ul li{
+    padding: 5px 10px;
+    position: relative;
+    display: inline-block;
+}
+#meeting__list ul li{
+    border-bottom: 1px dotted #484848;
+}
+#meeting__list ul li:last-child{
+    border-bottom: none;
+}
+#meeting__list ul li div,#meeting_detail_info ul li div{
+    float: left;
+    width: 100%;
+}
+#meeting__list ul li div span,#meeting_detail_info ul li div span{
+    width: 90px;
+    display: inline-block;
+    text-align: right;
+}
+#meeting__list ul li div.timeButton,#meeting__list ul li div.detailButton,#meeting_detail_info ul li div.timeButton{
+    text-align: center;
+    margin: 5px 0 10px 0;
+}
+#meeting__list ul li div.timeButton a,#meeting__list ul li div.detailButton a,#meeting_detail_info ul li div.timeButton a{
+    background: #165ECC;
+    color: #f5f5f5;
+    display: inline-block;
+    padding: 0 10px;
+    height: 100%;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+}
+#meeting__list ul li div.timeButton a.cancelTime{
+    margin-right: 8px;
+}
+#meeting_detail_info{
+    margin-top: 12px;
+    padding-top: 10px;
+}

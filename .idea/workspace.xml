@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db54e42d-4ec2-43d4-8184-00c375f86de9" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27284">
+              <caret line="1436" column="36" selection-start-line="1436" selection-start-column="36" selection-end-line="1436" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usersvr.md" pinned="false" current-in-tab="false">
+        <entry file="file://F:/work/git/vcs/doc/api_doc/doc/usersvr.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5130">
+              <caret line="270" column="10" selection-start-line="270" selection-start-column="10" selection-end-line="270" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="meeting.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/meeting.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3173">
+              <caret line="427" column="44" selection-start-line="427" selection-start-column="44" selection-end-line="427" selection-end-column="44" />
+              <folding>
+                <element signature="e#233#12872#0" />
+                <element signature="n#!!block;n#removeLists#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="718" column="49" selection-start-line="718" selection-start-column="49" selection-end-line="718" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#24347#25124#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reset.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/reset.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7828">
+              <caret line="462" column="34" selection-start-line="462" selection-start-column="34" selection-end-line="462" selection-end-column="34" />
+              <folding>
+                <element signature="n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#5;n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>info</find>
+      <find>infoTips</find>
+      <find>decodeba</find>
+      <find>登录成功</find>
+      <find>format(</find>
+      <find>reLogin</find>
+      <find>base64</find>
+      <find>jqubase64.js</find>
+      <find>logout</find>
+      <find>decodeBase64</find>
+      <find>base</find>
+      <find>login</find>
+      <find>sessionStorage</find>
+      <find>qqButton</find>
+      <find>qq</find>
+      <find>QQButton</find>
+      <find>/info</find>
+      <find>/user/info</find>
+      <find>apis/user/info</find>
+      <find>apis/user/get</find>
+      <find>apis/user/</find>
+      <find>verifyCode</find>
+      <find>会议列表</find>
+      <find>contactList</find>
+      <find>register</find>
+      <find>streamlocal</find>
+      <find>public/images/</find>
+      <find>layer.msg</find>
+      <find>v.sunni</find>
+      <find>jquery</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>rtcsvr/user/</replace>
+      <replace>rtcsvr/</replace>
+      <replace>'/rtcsvr/</replace>
+      <replace>sessionStorage.getItem('contactsList')</replace>
+      <replace />
+      <replace>meeting_detail_info</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/js/common.js" />
+        <option value="$PROJECT_DIR$/addContact.html" />
+        <option value="$PROJECT_DIR$/erizoClient/src/Events.js" />
+        <option value="$PROJECT_DIR$/erizoClient/src/views/AudioPlayer.js" />
+        <option value="$PROJECT_DIR$/erizoClient/src/Stream.js" />
+        <option value="$PROJECT_DIR$/erizoClient/src/Room.js" />
+        <option value="$PROJECT_DIR$/erizoClient/src/views/VideoPlayer.js" />
+        <option value="$PROJECT_DIR$/public/js/mqtt.js" />
+        <option value="$PROJECT_DIR$/public/js/browserMqtt.js" />
+        <option value="$PROJECT_DIR$/public/css/common.css" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/js/meeting.js" />
+        <option value="$PROJECT_DIR$/public/css/iconfont.css" />
+        <option value="$PROJECT_DIR$/public/css/login.css" />
+        <option value="$PROJECT_DIR$/public/js/util.js" />
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/public/js/index.js" />
+        <option value="$PROJECT_DIR$/public/js/config.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="webrtc2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webrtc2.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webrtc2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webrtc2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webrtc2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webrtc2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webrtc2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webrtc2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="font" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webrtc2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webrtc2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webrtc2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webrtc2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="F:/work/steps" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Program Files\webrtc2.0\public\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Program Files\webrtc2.0\public\font" />
+      <recent name="F:\Program Files\webrtc2.0" />
+      <recent name="F:\Program Files\webrtc2.0\public\js" />
+      <recent name="E:\Program Files\webrtc2.0\layui" />
+      <recent name="D:\webrtc\erizoClient\lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db54e42d-4ec2-43d4-8184-00c375f86de9" name="Default" comment="" />
+      <created>1493261048383</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1493261048383</updated>
+      <workItem from="1493261050419" duration="7087000" />
+      <workItem from="1493342066150" duration="1836000" />
+      <workItem from="1493697516797" duration="1198000" />
+      <workItem from="1493776146191" duration="1888000" />
+      <workItem from="1494328884168" duration="1882000" />
+      <workItem from="1494405241348" duration="1166000" />
+      <workItem from="1494468644618" duration="2448000" />
+      <workItem from="1494590391640" duration="740000" />
+      <workItem from="1494644576307" duration="1034000" />
+      <workItem from="1494811465254" duration="864000" />
+      <workItem from="1494896919554" duration="2550000" />
+      <workItem from="1494983376151" duration="595000" />
+      <workItem from="1495069870284" duration="1196000" />
+      <workItem from="1495158023492" duration="1321000" />
+      <workItem from="1495416056179" duration="600000" />
+      <workItem from="1495501595487" duration="600000" />
+      <workItem from="1495873288891" duration="1935000" />
+      <workItem from="1496193000155" duration="1263000" />
+      <workItem from="1496282625628" duration="4000" />
+      <workItem from="1496367561409" duration="998000" />
+      <workItem from="1496645831706" duration="590000" />
+      <workItem from="1496718332310" duration="1802000" />
+      <workItem from="1497517504147" duration="851000" />
+      <workItem from="1497951714649" duration="759000" />
+      <workItem from="1498008846358" duration="162000" />
+      <workItem from="1498203557503" duration="520000" />
+      <workItem from="1500983478416" duration="3667000" />
+      <workItem from="1501056545118" duration="5388000" />
+      <workItem from="1501117994514" duration="13899000" />
+      <workItem from="1501204480975" duration="21937000" />
+      <workItem from="1501463795082" duration="20712000" />
+      <workItem from="1501549671990" duration="18453000" />
+      <workItem from="1501636009120" duration="6534000" />
+      <workItem from="1501808767893" duration="37000" />
+      <workItem from="1501809420490" duration="27358000" />
+      <workItem from="1501904327296" duration="20407000" />
+      <workItem from="1502068602017" duration="19813000" />
+      <workItem from="1502153942141" duration="13639000" />
+      <workItem from="1502181654233" duration="5693000" />
+      <workItem from="1502241095757" duration="498000" />
+      <workItem from="1502243154707" duration="6539000" />
+      <workItem from="1502326968490" duration="7395000" />
+      <workItem from="1502337991797" duration="402000" />
+      <workItem from="1502338428590" duration="38000" />
+      <workItem from="1502351223145" duration="1269000" />
+      <workItem from="1530514767424" duration="960000" />
+      <workItem from="1530527497252" duration="599000" />
+      <workItem from="1530581233535" duration="1219000" />
+      <workItem from="1530667565826" duration="733000" />
+      <workItem from="1530669573026" duration="14839000" />
+      <workItem from="1530763010756" duration="14636000" />
+      <workItem from="1530841232145" duration="15989000" />
+      <workItem from="1531099828021" duration="27278000" />
+      <workItem from="1531185801290" duration="16382000" />
+      <workItem from="1531272754380" duration="10456000" />
+      <workItem from="1531358790388" duration="16230000" />
+      <workItem from="1531444487433" duration="8486000" />
+      <workItem from="1531704609239" duration="13022000" />
+      <workItem from="1531790888228" duration="18439000" />
+      <workItem from="1531878935311" duration="17283000" />
+      <workItem from="1531963379661" duration="19378000" />
+      <workItem from="1532049816028" duration="16144000" />
+      <workItem from="1532309236413" duration="18521000" />
+      <workItem from="1532395491652" duration="21855000" />
+      <workItem from="1532481941098" duration="11293000" />
+      <workItem from="1532568521700" duration="4148000" />
+      <workItem from="1532654498726" duration="8036000" />
+      <workItem from="1532920739669" duration="1307000" />
+      <workItem from="1533001280858" duration="1195000" />
+      <workItem from="1533086818751" duration="1805000" />
+      <workItem from="1533173655263" duration="599000" />
+      <workItem from="1533259196107" duration="9394000" />
+      <workItem from="1533518859359" duration="2406000" />
+      <workItem from="1533523446859" duration="4540000" />
+      <workItem from="1533605245511" duration="9684000" />
+      <workItem from="1533691387666" duration="2375000" />
+      <workItem from="1533778076214" duration="1503000" />
+      <workItem from="1533864310155" duration="597000" />
+      <workItem from="1534123798977" duration="1165000" />
+      <workItem from="1534209720921" duration="1801000" />
+      <workItem from="1534296639356" duration="1518000" />
+      <workItem from="1534382576574" duration="3487000" />
+      <workItem from="1534469253512" duration="2197000" />
+      <workItem from="1534728309486" duration="1375000" />
+      <workItem from="1534814597255" duration="594000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="553035000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20196672" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.12376238" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0014641288" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.12400636" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/index.js</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/index.js</url>
+          <line>935</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/index.js</url>
+          <line>1218</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/index.js</url>
+          <line>1452</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/js/index.js</url>
+          <line>1473</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/erizoClient/src/webrtc-stacks/FirefoxStack.js" />
+    <entry file="file://$PROJECT_DIR$/public/js/socket.io.js" />
+    <entry file="file://$PROJECT_DIR$/erizoClient/src/views/View.js" />
+    <entry file="file://$USER_HOME$/Desktop/aisai/asse/src/main/webapp/WEB-INF/view/login.jsp" />
+    <entry file="file://$PROJECT_DIR$/public/js/common.js" />
+    <entry file="file://$PROJECT_DIR$/erizoClient/src/Connection.js" />
+    <entry file="file://$PROJECT_DIR$/move.html" />
+    <entry file="file://$PROJECT_DIR$/uploadPicture.html" />
+    <entry file="file://$PROJECT_DIR$/erizoClient/src/Events.js" />
+    <entry file="file://$PROJECT_DIR$/erizoClient/src/views/VideoPlayer.js" />
+    <entry file="file://$PROJECT_DIR$/erizoClient/src/Stream.js" />
+    <entry file="file://$PROJECT_DIR$/erizoClient/src/views/AudioPlayer.js" />
+    <entry file="file://$PROJECT_DIR$/addContact.html" />
+    <entry file="file://$PROJECT_DIR$/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1575" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layui/lay/modules/code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/adapter.js" />
+    <entry file="file://$PROJECT_DIR$/public/js/jquery-3.3.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2546">
+          <caret line="1" column="1369" selection-start-line="1" selection-start-column="1369" selection-end-line="1" selection-end-column="1369" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery-1.8.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/stomp.js" />
+    <entry file="file://$PROJECT_DIR$/public/js/sockjs.min.js" />
+    <entry file="file://F:/Downloads/MQTT.js-master/MQTT.js-master/test/mqtt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3772">
+          <caret line="7" column="36" lean-forward="true" selection-end-line="230" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Downloads/MQTT.js-master/MQTT.js-master/example.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/browserMqtt.min.js" />
+    <entry file="file://$PROJECT_DIR$/public/js/paho-mqtt-min.js" />
+    <entry file="file://$PROJECT_DIR$/public/js/mqtt.js" />
+    <entry file="file://$PROJECT_DIR$/public/js/mqtt.min.js" />
+    <entry file="file://$PROJECT_DIR$/../zgsj/webrtcP/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3192" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zgsj/webPCPlus/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5149">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zgsj/webrt_oa1.0/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="248" selection-start-line="248" selection-end-line="248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zgsj/视频会议/webrtc_2018_3_6/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4332" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/browserMqtt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="10870" selection-start-line="10870" selection-end-line="10870" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erizoClient/lib/socket.io.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="368" column="47" selection-start-line="368" selection-start-column="47" selection-end-line="368" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/erizoClient/src/Room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11248">
+          <caret line="592" column="13" selection-start-line="592" selection-start-column="13" selection-end-line="592" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194389">
+          <caret line="10244" column="10" selection-start-line="10244" selection-start-column="10" selection-end-line="10244" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/work/font_493257_f4f42bd1q04/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="107" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/work/font_493257_f4f42bd1q04/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="1355" column="1" selection-start-line="1355" selection-start-column="1" selection-end-line="1355" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/iconfont.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/work/git/vcs/doc/api_doc/doc/usersvr.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5130">
+          <caret line="270" column="10" selection-start-line="270" selection-start-column="10" selection-end-line="270" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7828">
+          <caret line="462" column="34" selection-start-line="462" selection-start-column="34" selection-end-line="462" selection-end-column="34" />
+          <folding>
+            <element signature="n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#5;n#form#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27284">
+          <caret line="1436" column="36" selection-start-line="1436" selection-start-column="36" selection-end-line="1436" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/meeting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3173">
+          <caret line="427" column="44" selection-start-line="427" selection-start-column="44" selection-end-line="427" selection-end-column="44" />
+          <folding>
+            <element signature="e#233#12872#0" />
+            <element signature="n#!!block;n#removeLists#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.base64.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/my_code.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="718" column="49" selection-start-line="718" selection-start-column="49" selection-end-line="718" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#24347#25124#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

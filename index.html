@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>朝歌视讯</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="icon" href="public/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <style>
+        @media screen and (max-width: 1099px){
+            #layui-layer1.layui-layer-iframe {
+                overflow-y: hidden;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="public/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        var imouse = 0;
+        var timer;
+        function mouseIn(){
+            timer = window.setInterval(foo, 2000);
+        }
+        function mouseOut(){
+            window.clearInterval(timer);
+            var flag=true;
+            $("#extendedToolbar").hover(function(){
+                flag=false;
+                $(this).addClass("toolbar_in");
+                $(".nav-control").addClass("nav-control-in").removeClass("nav-control-out");
+            });
+            $(".nav-control").hover(function(){
+                flag=false;
+                $(this).addClass("nav-control-in");
+                $("#extendedToolbar").addClass("toolbar_in");
+            });
+            window.setTimeout(function(){
+                if(flag){
+                    $('.nav-control').removeClass('nav-control-in').addClass('nav-control-out');
+                    if(toolbar){
+                        $('.toolbar').removeClass('toolbar_in').addClass('toolbar_out');
+                    }else{
+                        $('.toolbar').removeClass('toolbar_in').addClass('toolbar_out2');
+                    }
+                }
+            },1000);
+        }
+        function mouseMove(){
+            if(imouse === 1){
+                $('.toolbar').removeClass('toolbar_out').addClass('toolbar_in');
+                $('.nav-control').removeClass('nav-control-out').addClass('nav-control-in');
+            }
+            imouse = 1;
+        }
+        var foo = function() {
+            if (imouse === 0) {
+                $('.nav-control').removeClass('nav-control-in').addClass('nav-control-out');
+                if(toolbar){
+                    $('.toolbar').removeClass('toolbar_in').addClass('toolbar_out');
+                }else{
+                    $('.toolbar').removeClass('toolbar_in').addClass('toolbar_out2');
+                }
+            }
+            imouse = 0;
+        };
+    </script>
+</head>
+<body>
+    <div id="extendedToolbar" class="toolbar toolbar_in displayNone">
+        <div id="extendedToolbarButton" style="height:100%;width:100%;position:absolute;left:0;top:0;z-index:3;">
+            <ul class="layui-nav layui-nav-tree" lay-filter="navLeft">
+                <li id="navTop" tag="profile_container">
+                    <a id="nav_MyHead" class="button toolbar_button_profile">
+                        <img id="nav_MyHead_img" src="public/images/tuzi.png"/>
+                    </a>
+                </li>
+                <li class="layui-nav-item" tag="contact_list">
+                    <a class="button">
+                        <i class="iconfont icon-tongxunlu"></i>
+                        <cite>用户列表</cite>
+                    </a>
+                </li>
+                <li class="layui-nav-item" tag="order">
+                    <a class="button">
+                        <i class="iconfont icon-time"></i>
+                        <cite>预约会议</cite>
+                    </a>
+                </li>
+                <li class="layui-nav-item" tag="starMeeting">
+                    <a class="button">
+                        <i class="iconfont icon-pengyou"></i>
+                        <cite>发起会议</cite>
+                    </a>
+                </li>
+                <li class="layui-nav-item" tag="addMeeting">
+                    <a class="button">
+                        <i class="iconfont icon-iconfontfriendadd"></i>
+                        <cite>加入会议</cite>
+                    </a>
+                </li>
+                <li class="layui-nav-item" tag="meetingList">
+                    <a class="button">
+                        <i class="iconfont icon-list"></i>
+                        <cite>会议列表</cite>
+                    </a>
+                </li>
+                <!--<li class="layui-nav-item" tag="meetingRecord">
+                    <a class="button">
+                        <i class="iconfont icon-huifang"></i>
+                        <cite>会议回放</cite>
+                    </a>
+                </li>-->
+                <li class="layui-nav-item" tag="call_records">
+                    <a class="button">
+                        <i class="iconfont icon-call"></i>
+                        <cite>通话记录</cite>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="sideToolbarContainer" class="sideToolbarContainer">
+            <div id="profile_container" class="displayNone">
+              <div class="head_portrait">
+                  <img src="public/images/tuzi.png"/>
+              </div>
+                <div class="my_nickName">
+                    <input id="my_nickName" value="" readonly maxlength="8">
+                    <span   class="iconfont icon-editor-line" id="forMyName" save=""></span>
+                </div>
+                <p class="my_phone"></p>
+                <div id="changePsd">
+                    <a>修改密码</a>
+                </div>
+                <div id="loginOut">
+                    <a>退出登录</a>
+                </div>
+            </div>
+            <div id="change_container" class="displayNone">
+                <div class="head_portrait">
+                    修改密码
+                </div>
+                <div class="psd_info">
+                    <input id="oldPsd" type="password" name="pass" autocomplete="off" placeholder="输入旧密码"/>
+                    <input id="newPsd" type="password" name="pass" autocomplete="off" placeholder="输入新密码"/>
+                    <input id="confirmPsd" type="password" name="pass" autocomplete="off" placeholder="确认新密码"/>
+                </div>
+                <div id="submit">
+                    <a>确定</a>
+                </div>
+                <div id="cancel">
+                    <a>取消</a>
+                </div>
+            </div>
+            <div id="contact_list" class="displayNone">
+                <div class="contact_operate">
+                    <p class="title">用户列表</p>
+                    <div class="search">
+                        <i class="iconfont icon-search"></i>
+                        <input type="text" placeholder="搜索" id="search"/>
+                    </div>
+                </div>
+                <div id="contactList" style="position: relative">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="addMeeting" class="displayNone">
+                <p class="title">加入会议</p>
+                <input type="text" placeholder="会议邀请码" id="addCode" maxlength="6"/>
+                <a id="addCodeSure">确认</a>
+            </div>
+            <div id="starMeeting" class="displayNone">
+                <div style="margin-bottom: 10px;">
+                    <p class="title">发起会议</p>
+                    <div class="meeting_info">
+                        <div class="meetingInfo">
+                            <input id="MeetTheme" type="text" placeholder="会议主题"/>
+                            <input id="MeetName" type="text" placeholder="会议名称"/>
+                        </div>
+                        <select id="chooseModel" placeholder="选择会议模式">
+                            <option value ="1">主控模式</option>
+                            <option value ="2">讨论模式</option>
+                            <option value="3">大会模式</option>
+                        </select>
+                        <select class="chooseTypeModel" placeholder="选择会议类型">
+                            <option value ="1">视频会议</option>
+                            <option value ="2">语音会议</option>
+                        </select>
+                        <div class="search" style="width: 160px;margin-top: 10px">
+                            <i class="iconfont icon-search"></i>
+                            <input style="width: 124px;" type="text" placeholder="搜索参会人" id="searchMeeting">
+                        </div>
+                    </div>
+                </div>
+                <div id="selectList" style="position: relative">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="startM">
+                    <div class="startMeeting" style="margin-bottom: 7px;">
+                        <a>发起会议</a>
+                    </div>
+                </div>
+            </div>
+            <div id="call_records" class="displayNone">
+                <p class="title">通话记录</p>
+                <div class="fast_call_phone">
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" placeholder="搜索" id="fastInput">
+                </div>
+                <div id="call_records_list" style="position: relative;">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div id="meetingRecord" class="displayNone">
+                <p class="title">会议回放</p>
+                <!--<div class="fast_call_phone">
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" placeholder="搜索" id="fastInput">
+                </div>-->
+                <div id="meeting_records_list" style="position: relative;">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div id="meetingList" class="displayNone">
+                <p class="title">会议列表</p>
+                <div class="fast_search">
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" placeholder="搜索" id="fastSearch">
+                </div>
+                <div id="meeting__list" style="position: relative;">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div id="meetingDetailList" class="displayNone">
+                <p class="title">会议详情</p>
+                <div id="meeting_detail_info" style="position: relative;">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div id="order" class="displayNone">
+                <p class="title">预约会议</p>
+                <div class="meeting_info">
+                    <div class="meetingInfo">
+                        <input class="MeetSubject" type="text" placeholder="会议主题"/>
+                        <input class="MeetTitle" type="text" placeholder="会议名称"/>
+                    </div>
+                    <select class="chooseModel" placeholder="选择会议模式">
+                        <option value ="1">主控模式</option>
+                        <option value ="2">讨论模式</option>
+                        <option value="3">大会模式</option>
+                    </select>
+                    <!--1表示视频，2表示语音-->
+                    <select class="chooseTypeModel" placeholder="选择会议类型">
+                        <option value ="1">视频会议</option>
+                        <option value ="2">语音会议</option>
+                    </select>
+                    <div class="orderMeeting">
+                        <!--<i class="iconfont icon-time"></i>-->
+                        <input style="padding: 0;font-size: 14px;"  type="text" class="layui-input" id="test1" onclick="getTime()"  placeholder="预约会议时间">
+                    </div>
+                    <div class="search" style="margin-top: 10px">
+                        <i class="iconfont icon-search"></i>
+                        <input style="width: 124px;" type="text" placeholder="搜索参会人" class="searchMeeting">
+                    </div>
+                </div>
+                <div class="selectList" style="position: relative">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="orderButton" style="margin-bottom: 7px;">
+                    <a>确认预约</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 控制栏 -->
+    <div class="nav-control nav-control-in displayNone">
+        <div class="control-box">
+            <div id="record" class="control-fs-2 displayNone">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-record"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <span>录制</span>
+                    </div>
+                </div>
+            </div>
+            <div id="controlVoice" class="control-fs-2">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-iconfontvoicefill"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <span>静音/外放</span>
+                    </div>
+                </div>
+            </div>
+            <div id="applySpeak" class="control-fs-2 displayNone">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-jushou"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <span>申请</span>
+                    </div>
+                </div>
+            </div>
+            <div id="controlVideo" class="control-fs-2">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-video1" style="font-size:22px;"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <span>语音/视频</span>
+                    </div>
+                </div>
+            </div>
+            <div id="icodeButton" class="control-fs-2 displayNone">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-information"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <div>
+                            <span>邀请码：</span>
+                            <span id="meetIcode"></span>
+                        </div>
+                        <div>
+                            <span>会议主题：</span>
+                            <span id="_meetTheme"></span>
+                        </div>
+                        <div>
+                            <span>会议名称：</span>
+                            <span id="_meetName"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="chooseMeetList" class="control-fs-2 displayNone">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-pengyou"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <span>我选择的参会人员</span>
+                    </div>
+                </div>
+            </div>
+            <div id="joinMeetList" class="control-fs-2 displayNone">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-list"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <span>参会人列表</span>
+                    </div>
+                </div>
+            </div>
+            <div id="controlScreen" class="control-fs-2">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-quanping1"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <span>全屏/退出全屏</span>
+                    </div>
+                </div>
+            </div>
+            <div id="hangUpButton" class="control-fs-2">
+                <div style="position:relative;width:100%;height:100%">
+                    <i class="icon iconfont icon-call-hangup-disable color-red"></i>
+                    <div class="tip-bubble tip-bubble-top displayNone">
+                        <span>挂断</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 屏幕显示-->
+    <div id="remoteVideos_area" onmousemove="mouseMove()" onmouseover="mouseIn()" onmouseout="mouseOut()">
+        <div id="wait" class="displayNone">
+            <div class="userImg">
+                <div class="img">
+                    <img src="public/images/tuzi.png"/>
+                    <div class="border rotate"><span></span></div>
+                </div>
+            </div>
+            <div class="userInfo">
+                <p class="name"></p>
+                <p class="number"></p>
+                <p class="waitTip"></p>
+            </div>
+            <div class="control">
+                <ul>
+                    <li id="calledAnswer">
+                        <div>
+                            <i style="font-size: 36px;color:#1fc173;" class="iconfont icon-answer"></i>
+                            <p>接听</p>
+                        </div>
+                    </li>
+                    <li id="refuseHangUp">
+                        <div>
+                            <i style="font-size: 36px;color:#ff1010;" class="iconfont icon-hangup"></i>
+                            <p>拒绝</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="remoteVideos_meet" class="remoteVideos_meet_move1">
+            <video id="otherVideo" src="" style="width:100%;height:100%;position:absolute;top:0;left:0;" autoplay="autoplay"></video>
+            <div id="_otherVideo" style="width:100%;height:100%;position:absolute;top:0;left:0;"></div>
+            <div id="remoteVideo_bottom" class="remoteVideos-control-open">
+                <div id="remoteVideo_bottom1" style="height:100%;position:relative;">
+                    <div id="localVideoContainer" class="videoContainerBlock displayNone">
+                        <div id="_myVideo" style="position:relative;width:100%;height:100%;">
+                            <video id="myVideo" src="" style="width:100%;height:100%" class="displayNone" autoplay="autoplay"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="videoClose_streamList" class="showVideo-control-out">
+            <div style="text-align:center;font-size:16px;line-height:30px;padding:15px 10px 0 10px;">
+                <span>参会人列表</span>
+            </div>
+            <div id="_videoClose_streamList" style="position:relative;">
+                <div style="border-top:none;">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="choose_streamList" class="showVideo-control-out">
+            <div style="text-align:center;font-size:16px;line-height:30px;padding:15px 10px 16px 10px;">
+                <span>选择的会议人员列表</span>
+            </div>
+            <div id="_choose_streamList" style="position:relative;height: 462px;">
+                <div style="border-top:none;">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="remoteVideos_control" class="displayNone">
+            <i class="icon iconfont icon-arrow"></i>
+        </div>
+    </div>
+
+    <div id="infoTips" class="displayNone"></div>
+
+    <div class="background"></div>
+
+    <div class="displayNone">
+        <audio id="audio" src="public/audio/call.mp3"></audio>
+        <audio id='audio1' src="public/audio/1670.mp3"></audio>
+        <audio id="noAnswerAudio" src="public/audio/noAnswer.aac"></audio>
+        <audio id='busyAudio' src="public/audio/busy.mp3"></audio>
+    </div>
+    <div id="closeVideo" class="displayNone"></div>
+    <script type="text/javascript" src="public/js/jquery.base64.js"></script>
+    <script type="text/javascript" src="public/js/util.js"></script>
+    <script type="text/javascript" src="public/js/browserMqtt.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="public/js/config.js"></script>
+    <!-- socket.io -->
+    <script type="text/javascript" src="./erizoClient/lib/socket.io.js"></script>
+    <!-- src -->
+    <script type="text/javascript" src="./erizoClient/src/Events.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/webrtc-stacks/FcStack.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/webrtc-stacks/BowserStack.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/webrtc-stacks/FirefoxStack.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/webrtc-stacks/ChromeStableStack.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/webrtc-stacks/ChromeCanaryStack.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/Connection.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/Stream.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/Room.js"></script>
+    <!-- util-->
+    <script type="text/javascript" src="./erizoClient/src/utils/L.Logger.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/utils/L.Base64.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/utils/L.Resizer.js"></script>
+    <!-- view -->
+    <script type="text/javascript" src="./erizoClient/src/views/View.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/views/VideoPlayer.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/views/AudioPlayer.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/views/Bar.js"></script>
+    <script type="text/javascript" src="./erizoClient/src/views/Speaker.js"></script>
+    <!-- ==== end erizo.js 源码引入 -->
+    <script type="text/javascript" src="public/js/index.js?t=0.01"></script>d
+    <script type="text/javascript" src="public/js/meeting.js?t=0.01"></script>
+<script>
+    layui.use(['element','layedit', 'laydate'], function(){
+        var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+        var layer=layui.layer;
+        var layedit=layui.layedit;
+        var laydate=layui.laydate;
+        //监听导航点击
+        element.on('nav(navLeft)', function(elem){
+            layer.msg(elem.text());
+        });
+    });
+
+    function getTime(_this) {
+        laydate({
+            elem: $('#test1')[0],
+            format: 'YYYY-MM-DD hh:mm:ss',
+            type:'datetime',
+            choose: function(dates){ // 选择日期完毕的回调
+                console.log(dates);
+            }
+        });
+    }
+
+    $(window).resize(function() {
+        dynamic();
+    });
+    function dynamic(){
+        var windowH = document.body.clientHeight;
+        $('#contactList').css('height',windowH-100+'px');
+        $('#selectList').css('height',windowH-320+'px');
+		$('#order .selectList').css('height',windowH-350+'px');
+        $('#call_records_list,#meeting_records_list,#meeting__list').css('height',windowH-92+'px');
+        $("#_videoClose_streamList").css('height',windowH-200+'px');
+        /*$(".videoContainer_remote").each(function(e){
+            $(this).css("right",214+(120+4)*e+"px");
+        });*/
+    }
+    $(function () {
+        if(getParameterByName ("ticket")){
+            login_ticket(getParameterByName ("ticket"));
+        }else if(getCookie("password") && sessionStorage.getItem('userSaveInfo') && getCookie("token")){
+            reLogin();
+        }else{
+            openLogin();
+        }
+
+        var _userSaveInfo=JSON.parse(localStorage.getItem('userSaveInfo'));
+        if(_userSaveInfo){
+            localStorage.setItem("userSaveInfo",JSON.stringify(_userSaveInfo));
+        }
+        dynamic();
+        $("#remoteVideos_meet .arrow-left").click(function(){
+            var flag=false;
+            if($("#localVideoContainer").css("right").split("px")[0]==0){
+                flag=true;
+            }else{
+                flag=false;
+            }
+            if($(".videoContainer_remote:last").css("right").split("px")[0]!==(remote_num-1)*124){
+                $(".videoContainerBlock").each(function(e){
+                    var currentRight=JSON.parse($(this).css("right").split("px")[0]);
+                    if(flag){
+                        $(this).css("right",(currentRight-214)+"px");
+                    }else{
+                        $(this).css("right",(currentRight-124)+"px");
+                    }
+                    console.log("--------------------eeee"+currentRight+124);
+                });
+            }
+        });
+
+        var arrow_right_ok=true;
+
+        $("#remoteVideos_meet .arrow-right").unbind("click").bind("click",function(){
+            var flag=false;
+            if($("#localVideoContainer").css("right").split("px")[0]==-214){
+                flag=true;
+            }else{
+                flag=false;
+            }
+            if($("#localVideoContainer").css("right").split("px")[0]==0){
+                arrow_right_ok=false;
+            }else{
+                arrow_right_ok=true;
+            }
+            if(arrow_right_ok){
+                $(".videoContainerBlock").each(function(e){
+                    var currentRight=JSON.parse($(this).css("right").split("px")[0]);
+                    if(flag){
+                        $(this).css("right",(currentRight+214)+"px");
+                    }else{
+                        $(this).css("right",(currentRight+124)+"px");
+                    }
+                });
+            }
+        });
+
+        $("#remoteVideos_control i").unbind("click").bind("click",function(){
+            $(this).toggleClass("icon-arrow-copy-copy icon-arrow");
+            $("#remoteVideo_bottom").toggleClass("remoteVideos-control-close remoteVideos-control-open");
+        });
+    });
+
+    var toolbar = true;
+    $('#extendedToolbarButton ul li').unbind("click").bind("click",function () {
+        setCookie();
+        $('#addMeeting input').val('');
+        $('.meeting_info input').val('');
+        $('#search').val('');
+        $('#selectList ul').html(meetListHtml);
+        $('#order .selectList ul').html(meetListHtml);
+        $('#contactList ul').html(contactListHtml);
+        $("#chooseList").addClass("displayNone").removeClass("displayBlock");
+        $("#chooseList ul").html("");
+        selectUin=[];
+        selectUinList=[];
+        if($(this).hasClass("selected")){
+            $(this).removeClass('selected');
+            $('#sideToolbarContainer').addClass('sideOut').removeClass('sideIn');
+            $('#forMyName').attr('class','iconfont icon-editor-line');
+            toolbar = true;
+        }else{
+            toolbar = false;
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('#sideToolbarContainer').addClass('sideIn').removeClass('sideOut');
+        }
+        var tag = $(this).attr('tag');
+        $('#'+tag+'').removeClass('displayNone').siblings('div').addClass('displayNone');
+        theContactDetail();
+        selectMember();
+    });
+
+
+    $('#loginPhone,#loginPass').focus(function () {
+        $('#loginBox .info p').addClass('displayNone');
+    });
+
+    //提示框
+    function infoShow(msg){
+        $('#loginBox .info').text(msg).fadeIn(150);
+        window.setTimeout(function () {
+            $('#loginBox .info').fadeOut(150);
+        }, 1200)
+    }
+
+    /*nav start*/
+    $(".nav-control .control-fs-2").hover(function(){
+        $(this).addClass("controlNative");
+        var width=$(this).find(".tip-bubble").width()+20;
+        $(this).find(".tip-bubble").css("left",(50-width)/2+"px");
+        $(this).find(".tip-bubble").removeClass("displayNone");
+    },function(){
+        $(this).removeClass("controlNative");
+        $(this).find(".tip-bubble").addClass("displayNone");
+    });
+    $(".nav-control .control-fs-2").unbind("click").bind("click",function(){
+        setCookie();
+        $(this).toggleClass("controlClickNative");
+        $(this).find(".tip-bubble").addClass("displayNone");
+    });
+
+    /*全屏控制*/
+    /*退出/实现全屏*/
+    var a=0;
+    $("#controlScreen").unbind("click").bind("click",function() {
+        setCookie();
+        var elem = document.documentElement;
+        if(a==0){
+            $(this).css('opacity','1');
+            $(this).addClass("controlClickNative");
+            requestFullScreen(elem);
+            $(".layui-nav-item.selected").click();
+            a=1;
+        }else{
+            $(this).removeClass("controlClickNative");
+            exitFullScreen();
+            a=0;
+
+        }
+    });
+    $(document).keyup(function(event){
+        setCookie();
+        switch(event.keyCode) {
+            case 27:
+                if(a===1){
+                    a=0;
+                    $("#controlScreen").removeClass("controlClickNative");
+
+                }
+                break;
+            case 122:
+                if(a===0){
+                    $("#controlScreen").addClass("controlClickNative");
+                    a=1;
+                }else{
+                    $("#controlScreen").removeClass("controlClickNative");
+                    a=0;
+                }
+                break;
+        }
+    });
+    function requestFullScreen(element) {
+        var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+        requestMethod.call(element);
+    }
+    function exitFullScreen() {
+        var cfs = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen || document.exitFullScreen;
+        cfs.call(document);
+    }
+    /*nav end*/
+    /*nav and video*/
+
+
+    //发起会议按钮
+    $('.startMeeting a').unbind("click").bind("click",function () {
+        setCookie();
+        MeetingType();
+        $("#chooseList").addClass("displayNone").removeClass("displayBlock");
+        $("#chooseList ul").html("");
+    });
+
+    //预约会议
+    $(".orderButton a").unbind("click").bind("click",function () {
+        let title = $('#order .MeetTitle').val();
+        let subject=$("#order .MeetSubject").val();
+        let startTime = $('#test1').val();
+        let cmode=$("#order .chooseModel").val();
+        let ctype=$("#order .chooseTypeModel").val();
+        console.log(title,subject,startTime,cmode,ctype);
+        if(subject.length == 0 || subject.replace(/^\s+|\s+$/g,'').length==0){
+            if(subject.length == 0){
+                errorTips('不能为空','.MeetSubject');
+            }else{
+                errorTips('不能全为空格','.MeetSubject');
+            }
+            $('.MeetSubject').val("").focus();
+        }else if(subject.replace(/^\s+|\s+$/g,'').length>10 || subject.replace(/^\s+|\s+$/g,'').length<1){
+            errorTips('主题长度为1~10位','.MeetSubject',2,1);
+            $('.MeetSubject').val(subject.replace(/^\s+|\s+$/g,'')).focus();
+        }else if(title.length == 0 || title.replace(/^\s+|\s+$/g,'').length==0){
+            if(title.length == 0){
+                errorTips('不能为空','.MeetTitle');
+            }else{
+                errorTips('不能全为空格','.MeetTitle');
+            }
+            $('.MeetTitle').val("").focus();
+        }else if(title.replace(/^\s+|\s+$/g,'').length>10 || title.replace(/^\s+|\s+$/g,'').length<1){
+            errorTips('名称长度为1~10位','.MeetTitle',2,1);
+            $('.MeetTitle').val(title.replace(/^\s+|\s+$/g,'')).focus();
+        }else if(startTime==="" || startTime===undefined){
+            errorTips('请选择预约时间','#test1',2,1);
+            $('#test1').val(startTime).focus();
+        }else if(selectUinList.length==0){
+            errorTips('选择参会成员','#order .searchMeeting');
+        }else{
+            startTime = new Date($('#test1').val()).getTime();
+            if(startTime>new Date().getTime()){
+                $.ajax({
+                    type: 'POST',
+                    url: host+'apis/cs/appoint',
+                    beforeSend: function(request) {
+                        request.setRequestHeader('X-Authorization',sessionStorage.getItem('token'));
+                    },
+                    data: {title:title,subject:subject,uinList:JSON.stringify(selectUinList),appiontUtc:parseInt(startTime/1000),ctype:parseInt(ctype),cmode:parseInt(cmode)},
+                    dataType : "json",
+                    success: function(data) {
+                        console.log("=====同意预约=====");
+                        console.log(data);
+                        if(data.code===0){
+                            //预约成功
+                            $("#chooseList").addClass("displayNone").removeClass("displayBlock");
+                            $("#chooseList ul").html("");
+                            getMeetingInfo();
+                            selectUinList=[];
+                            $('#order .selectList ul li.contact').removeClass("selected");
+                            $("#order input").val("");
+                            layer.msg(data.msg);
+                        }else{
+                            layer.msg(data.msg);
+                        }
+                    }
+                });
+            }else{
+                errorTips('选择的预约时间应大于当前时间','#test1',2,1);
+                $('#test1').val(startTime).focus();
+            }
+        }
+    })
+
+    function MeetingType(){
+        //type为1表示视频，2表示语音
+        var theme = $('#MeetTheme').val();
+        var name = $('#MeetName').val();
+        var cmode=$("#chooseModel").val();
+        var ctype=$("#starMeeting .chooseTypeModel").val();
+        if(theme.length === 0 || theme.replace(/^\s+|\s+$/g,'').length===0){
+            if(theme.length === 0){
+                errorTips('不能为空','#MeetTheme');
+            }else{
+                errorTips('不能全为空格','#MeetTheme');
+            }
+            $('#MeetTheme').val("").focus();
+        }else if(theme.replace(/^\s+|\s+$/g,'').length>10 || theme.replace(/^\s+|\s+$/g,'').length<1){
+            errorTips('名称长度为1~10位','#MeetTheme',2,1);
+            $('#MeetTheme').val(theme.replace(/^\s+|\s+$/g,'')).focus();
+        }else if(name.length === 0 || name.replace(/^\s+|\s+$/g,'').length===0){
+            if(name.length === 0){
+                errorTips('不能为空','#MeetName');
+            }else{
+                errorTips('不能全为空格','#MeetName');
+            }
+            $('#MeetName').val("").focus();
+        }else if(name.replace(/^\s+|\s+$/g,'').length>10 || name.replace(/^\s+|\s+$/g,'').length<1){
+            errorTips('主题长度为1~10位','#MeetName',2,1);
+            $('#MeetName').val(name.replace(/^\s+|\s+$/g,'')).focus();
+        }else if(selectUin.length===0){
+            errorTips('选择参会成员','#searchMeeting');
+        }else{
+            if(localStream){
+                layer.alert('你还在视频通话中，请先结束再试');
+            }else{
+                startMeeting(name.replace(/^\s+|\s+$/g,''),theme.replace(/^\s+|\s+$/g,''),ctype,cmode);
+            }
+        }
+    }
+
+    //修改我的信息
+    $('#forMyName').unbind("click").bind("click",function () {
+        setCookie();
+        if($(this).attr('save') == ''){
+            $('#my_nickName').removeAttr('readonly').focus();
+            $(this).attr('class','iconfont icon-roundcheckfill');
+            $(this).attr('save','save');
+        }else{
+            var name = $('#my_nickName').val();
+            if(name.length === 0 || name.replace(/^\s+|\s+$/g,'').length===0) {
+                if (name.length === 0) {
+                    errorTips('请输入名字', '#my_nickName', 1);
+                } else {
+                    errorTips('不能为空格字符串', '#my_nickName', 1);
+                }
+            }else if(name.replace(/^\s+|\s+$/g,'').length >8 || name.replace(/^\s+|\s+$/g,'').length<1){
+                errorTips('名字长度为1~8位', '#my_nickName', 1,1);
+            }else{
+                $('#my_nickName').attr('readonly','readonly');
+                $(this).attr('class','iconfont icon-editor-line');
+                $(this).attr('save','');
+                MyInfo(name.replace(/\s+/g,''));
+            }
+        }
+    });
+
+    //退出登录按钮
+    $('#loginOut a').unbind("click").bind("click",function () {
+        layer.confirm('确认要退出登录吗？', {icon: 3, title:'提示'},function(){
+            loginOut();
+        }, function(){
+        });
+    });
+
+    //修改密码按钮
+    $('#changePsd a').unbind("click").bind("click",function () {
+        $("#change_container input").val("");
+        $("#change_container").removeClass("displayNone").siblings().addClass("displayNone");
+        $("#change_container #submit").unbind("click").bind("click",function () {
+            var oldPsd=$("#oldPsd").val().replace(/^\s+|\s+$/g,'');
+            var newPsd=$("#newPsd").val().replace(/^\s+|\s+$/g,'');
+            var confirmPsd=$("#confirmPsd").val().replace(/^\s+|\s+$/g,'');
+            if(oldPsd.length === 0){
+                errorTips('不能为空','#oldPsd');
+                $('#oldPsd').val("").focus();
+                return false;
+            }if(newPsd.length===0){
+                errorTips('不能为空','#newPsd');
+                $('#newPsd').val("").focus();
+                return false;
+            }if(newPsd.length<6 || newPsd.length>16){
+                errorTips('密码长度为6~16位','#newPsd');
+                $('#newPsd').val("").focus();
+                return false;
+            }if(confirmPsd.length===0){
+                errorTips('不能为空','#confirmPsd');
+                $('#confirmPsd').val("").focus();
+                return false;
+            }if(newPsd!==confirmPsd) {
+                errorTips('输入密码不一致','#confirmPsd');
+                $('#confirmPsd').val("").focus();
+                return false;
+            }else{
+                $.ajax({
+                    type: 'POST',
+                    url: host+'apis/user/password/change',
+                    beforeSend: function(request) {
+                        request.setRequestHeader('X-Authorization',sessionStorage.getItem('token'));
+                    },
+                    data: {passwdOld:oldPsd,passwdNew:newPsd},
+                    dataType : "json",
+                    success: function(result) {
+                        console.log("=====修改密码====="+result);
+                        var data = result;
+                        if(data.code===0){
+                            layer.msg(data.msg+",");
+                            window.setTimeout(function () {
+                                history.go(0);
+                            },1500);
+                        }else{
+                            layer.msg(data.msg);
+                        }
+                    }
+                })
+            }
+        });
+        $("#change_container #cancel").unbind("click").bind("click",function () {
+            $("#profile_container").removeClass("displayNone").siblings().addClass("displayNone");
+        })
+    });
+
+    function openLogin() {
+        layui.use('layer', function(){
+            var layer = layui.layer;
+            layer.open({
+                type: 2,
+                title: '登录',
+                shadeClose:false,
+                area: ['450px', '340px'],
+                content: 'login.html',
+                closeBtn: 0,
+                end:function(){
+                    window.setTimeout(function(){
+                        if(LOGINFlag){
+                            layer.tips('Hi，欢迎登录', '#nav_MyHead_img', {tips: 2});
+                            getMyInfo();
+                            getConnect();
+                            getContactList();
+                        }else{
+                            history.go(0);
+                        }
+                    },500);
+
+                }
+            });
+        });
+    }
+
+    function errorTips(msg,elementId,direction,temp){
+        var num;
+        if(direction){
+            num=direction;
+        }else{
+            num=2;
+        }
+        layer.tips(msg, elementId, {
+            tips: [num, '#EA2111'],
+            time: 2000
+        });
+        if(temp){
+
+        }else{
+            $(elementId).val('');
+        }
+    }
+</script>
+</body>
+</html>
